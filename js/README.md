@@ -130,6 +130,43 @@ Object.call(this,obj1,obj2,obj3)
 Object.apply(this,arguments)
 ```
 
+```js
+var scopeTest = (function(){ //考察了 this 的含义
+window.a=2;
+function fn(b){
+this.b = b;
+console.log(this.a);
+}
+var obj = {a:4,fn:fn};
+fn();
+obj.fn();
+fn.call(obj);fn.call(null);
+fn.apply(obj);fn.apply(null);
+var fninstance = new fn(8);
+console.log(fninstance.b);
+})();
+
+```
+
+
+
+```js
+function fruits() {} 
+fruits.prototype = {
+color:"red",
+say: function() {console.log(this.color);}
+}
+var apple = new fruits();
+ 
+apple.say();
+var banana = {color:"yellow"};
+apple.say.call(banana);
+apple.say.apply(banana);
+
+```
+
+
+
 #### 9、b继承a的方法
 
 function b(){}
