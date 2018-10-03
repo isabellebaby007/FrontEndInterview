@@ -85,7 +85,46 @@ btn.addEventListener("click",function(){alert(2)},false); //false表示在事件
 //先alert   1再alert  2
 ```
 
-#### 6、IE和DOM事件流得区别
+ie9以前：  attachEvent/detachEvent：进行事件类型传参需要带上on前缀；这种方式只支持事件冒泡，不支持事件捕获
+
+#### 6、IE和DOM事件流的区别
+
+1、执行顺序不一样
+
+2、参数不一样
+
+3、事件加不加on
+
+4、this指向问题
+
+#### 7、IE和标准下有哪些兼容性得写法
+
+```js
+var ev=ev||window.event
+document.documentElement.clientWidth||document.body.clientWidth
+var target=ev.srcElement||ev.target
+```
+
+#### 8、call和apply的区别
+
+都是为了用一个本不属于一个对象的方法，让这个对象去执行
+
+```js
+toString.call([],1,2,3)
+toString.apply([],[1,2,3])
+Object.call(this,obj1,obj2,obj3)
+Object.apply(this,arguments)
+```
+
+#### 9、b继承a的方法
+
+function b(){}
+
+b.prototype=new a;
+
+#### 10、js this指针、闭包、作用域
+
+
 
 
 
