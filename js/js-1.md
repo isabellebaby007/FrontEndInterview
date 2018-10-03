@@ -95,3 +95,40 @@ alert(typeof a);//object
 
 #### 28、
 
+```js
+var undefined;
+undefined==null;//true   相等但是不恒等===
+1==true;//true
+2==true;//false
+0==false;//true
+0=='';//true
+NaN==NaN;//false
+[]==false;//true
+[]==![];//true
+```
+
+```
+var foo="11"+2-"1";
+console.log(foo);
+console.log(typeof foo);
+```
+
+#### 29、考察引用数据类型
+
+```js
+var a=new Object();
+a.value=1;
+b=a;
+b.value=2;
+alert(a.value);//2
+```
+
+#### 30、已知数组 var stringArray=["this","is","baidu","campus"],alert出“this is baidu campus”
+
+```
+alert(stringArray.join(" "));
+```
+
+
+
+#### 31、
