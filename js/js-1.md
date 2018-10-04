@@ -202,3 +202,57 @@ alert(year+'-'+month+'-'+day);
 
 ```
 
+#### 34、为了保证页面输出安全
+
+
+
+```js
+function escapeHtml(str){
+    return str.replace(/[<>"&]/g,function(match){
+        switch(match){
+            case "<":
+                  return "&lt;";
+            case ">":
+                  return  "&gt;";
+            case "&":
+                  return  "&amp;";
+            case "\":
+                  return   "&quot;";
+        }
+       
+    });
+}
+```
+
+#### 35、foo=foo||bar,这行代码是什么意思，为什么要这样写
+
+短路表达式
+
+if(!foo)foo=bar;//如果foo存在，值不变，否则把bar的值赋给foo
+
+#### 36、下列代码输出什么
+
+```js
+var foo=1;
+function(){
+    console.log(foo);
+    var foo=2;
+    console.log(foo);
+}
+//  undefined  和  2
+```
+
+函数声明与变量声明会被javascript引擎隐式地提升到当前作用域得顶部，但是只提升名称不会提升赋值部分
+
+#### 37、用js实现随即选取10-100之间得10个数字，存入一个数组，并排序
+
+```js
+var iArray=[];
+function getRandom(istart,iend){
+    var iChoice=iend-istart+1;
+    return Math.floor(Math.random()*iChoice+istar);
+}
+```
+
+
+
