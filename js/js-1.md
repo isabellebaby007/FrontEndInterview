@@ -150,7 +150,14 @@ function combo(msg){
 
 ```js
 var numberArray=[3,6,2,4,1,5];
+for(var i=numberArray.length-1;i>=0;i--){
+    document.write(a[i]+'<br>');
+}
+```
 
+```js
+var numberArray=[3,6,2,4,1,5];
+document.write(arr.reverse());
 ```
 
 
@@ -159,5 +166,39 @@ var numberArray=[3,6,2,4,1,5];
 
 ```js
 var numberArray=[3,6,2,4,1,5];
+numberArray.sort(function(x,y){
+    return y-x;
+});//若return大于0，则y前x后
+document.writeln(numberArray);
+```
+
+3)升序排列
+
+```js
+var numberArray=[3,6,2,4,1,5];
+numberArray.sort(function(x,y){
+    return x-y;
+});//若return大于0，则y前x后
+document.writeln(numberArray);
+```
+
+#### 32、输出今天得日期，以YYYY-MM-DD方式，比如今天是2014年9月26日，则输出2014-09-26
+
+```js
+var d=newDate();
+var year=d.getFullYear();
+var month=d.getMonth+1;
+month=month<10?'0'+month:month;
+var day=d.getDate();
+day=day<10?'0'+day:day;
+alert(year+'-'+month+'-'+day);
+```
+
+#### 33、将字符串“<tr><td>{${$name}</td></tr>”中得｛$id｝替换成10，｛$name｝替换成Tony   （使用正则表达式）
+
+
+
+```
+
 ```
 
