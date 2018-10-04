@@ -129,6 +129,35 @@ alert(a.value);//2
 alert(stringArray.join(" "));
 ```
 
+已知有字符串foo="get-element-by-id",写一个function将其转化成驼峰表示法“getElementById”
+
+```js
+function combo(msg){
+    var arr=msg.split("-");//[get,element,by,id]
+    for(var i=1;i<arr.lengthl;i++){
+        arr[i]=arr[i].charAt(0).toUpperCase()+arr[i].substr(1,arr[i].length-1);//
+    }
+    masg=arr.join("");//msg="getElementById"
+    return msg;
+}
+```
 
 
-#### 31、
+
+#### 31、var numberArray=[3,6,2,4,1,5]
+
+1)实现对该数组的倒排，输出[5,1,4,2,6,3]
+
+```js
+var numberArray=[3,6,2,4,1,5];
+
+```
+
+
+
+2)实现对该数组的降序排列，输出[6,5,4,3,2,1]
+
+```js
+var numberArray=[3,6,2,4,1,5];
+```
+
