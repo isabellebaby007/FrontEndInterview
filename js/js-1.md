@@ -275,7 +275,36 @@ createTextNode()   //创建一个文本节点
 
 2)添加、移除、替换、插入
 
+```js
+appendChild()  //添加
+removeChild()   //移除
+replaceChild()   //替换
+insertBefore()   //插入
+```
 
+3)查找
+
+```js
+getElementByTagName()   //通过标签名称
+getElementByName()     //通过元素的name属性值
+getElementById()        //通过元素Id,唯一性
+```
+
+
+
+#### 40、有这样一个url：http://item.taobao.com/item.htm?a=1&b=2&c=&d=xxx&e,请写一段js程序提取url中的各个get参数（参数名和参数个数不缺第那个），将其按key-value形式返回到一个json结构中，如{a:'1',b:'2',c:'',d:'xxx',e:undefined}
+
+```js
+function serilizeUrl(url){
+    var result={};
+    url=url.split("?")[1];
+    var map=url.split("&");
+    for(var i=0,len=map.length;i<len;i++){
+        
+    }
+    
+}
+```
 
 
 
