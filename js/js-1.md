@@ -254,5 +254,28 @@ function getRandom(istart,iend){
 }
 ```
 
+#### 38、把两个数组合并，并删除第二个元素
+
+```js
+var array1=['a','b','c'];
+var bArray=['d','e','f'];
+var cArray=array1.concat(bArray);
+cArray.splice(1,1);
+```
+
+#### 39、怎样添加、移除、移动、复制、创建和查找节点
+
+1)创建新节点
+
+```js
+createDocumentFragment()  //创建一个DOM片段
+createElement()   //创建一个具体的元素
+createTextNode()   //创建一个文本节点
+```
+
+2)添加、移除、替换、插入
+
+
+
 
 
