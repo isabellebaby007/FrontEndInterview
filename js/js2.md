@@ -90,7 +90,7 @@ d、var obj={};
 
 #### 46 以下两个变量a和b，a+b哪个结果是NaN  
 
-A、var a=undefined,b=NaN;   //
+A、var a=undefined,b=NaN;   
 
 B、var a='123',b=NaN;
 
