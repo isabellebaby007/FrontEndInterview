@@ -56,9 +56,9 @@ callee是返回正在被执行的function函数，也就是所制定的function�
 
 问题：如果一对兔子每个月生一对兔子，一对新生兔，从第二个月起就开始生兔子；假定每对兔子都是一雌一雄，试问一对兔子，第n个月能繁殖成多少对兔子？使用callee
 
-````
+````js
 var result=[];
-function fn(n){
+function fn(n){//斐波拉契数列
     if(n==1){
         return 1;
        
@@ -76,3 +76,24 @@ function fn(n){
 }
 ````
 
+#### 45、下列哪一条语句会产生运行错误
+
+A、var _变量=NaN;
+
+B、var 0bj=[];
+
+c、var obj=//;
+
+d、var obj={};
+
+答案：B   陷井题，注意这里的B是零开头的，变量不能以数字开头
+
+#### 46 以下两个变量a和b，a+b哪个结果是NaN  
+
+A、var a=undefined,b=NaN;   //
+
+B、var a='123',b=NaN;
+
+C、var a=undefined,b=NaN;
+
+D、var a=NaN,b='undefined';
